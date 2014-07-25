@@ -13,9 +13,9 @@
 		B4A4977A19812EB40091D280 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A4977919812EB40091D280 /* XCTest.framework */; };
 		B4A4977B19812EB40091D280 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A4976B19812EB40091D280 /* Foundation.framework */; };
 		B4A4977D19812EB40091D280 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A4977C19812EB40091D280 /* UIKit.framework */; };
-		B4A4978019812EB40091D280 /* libListInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A4976819812EB40091D280 /* libListInfo.a */; };
+		B4A4978019812EB40091D280 /* libSystemMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A4976819812EB40091D280 /* libSystemMonitor.a */; };
 		B4A4978619812EB40091D280 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4A4978419812EB40091D280 /* InfoPlist.strings */; };
-		B4A4978819812EB40091D280 /* ListInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A4978719812EB40091D280 /* ListInfoTests.m */; };
+		B4A4978819812EB40091D280 /* SystemMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A4978719812EB40091D280 /* SystemMonitorTests.m */; };
 		B4A498131981867A0091D280 /* ProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A498121981867A0091D280 /* ProcessInfo.m */; };
 		B4F63CB519818AA7006EC367 /* ProcessInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B4A498111981867A0091D280 /* ProcessInfo.h */; };
 		B4F63CB9198284CD006EC367 /* Blacklister.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F63CB8198284CD006EC367 /* Blacklister.m */; };
@@ -48,17 +48,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B4A4976819812EB40091D280 /* libListInfo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libListInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A4976819812EB40091D280 /* libSystemMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSystemMonitor.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A4976B19812EB40091D280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B4A4976F19812EB40091D280 /* ListInfo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListInfo-Prefix.pch"; sourceTree = "<group>"; };
-		B4A4977019812EB40091D280 /* ConnectionInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConnectionInfo.h; path = ListInfo/ConnectionInfo.h; sourceTree = SOURCE_ROOT; };
+		B4A4976F19812EB40091D280 /* SystemMonitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SystemMonitor-Prefix.pch"; sourceTree = "<group>"; };
+		B4A4977019812EB40091D280 /* ConnectionInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConnectionInfo.h; path = SystemMonitor/ConnectionInfo.h; sourceTree = SOURCE_ROOT; };
 		B4A4977219812EB40091D280 /* ConnectionInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionInfo.m; sourceTree = "<group>"; };
-		B4A4977819812EB40091D280 /* ListInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A4977819812EB40091D280 /* SystemMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SystemMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A4977919812EB40091D280 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B4A4977C19812EB40091D280 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B4A4978319812EB40091D280 /* ListInfoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ListInfoTests-Info.plist"; sourceTree = "<group>"; };
+		B4A4978319812EB40091D280 /* SystemMonitorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SystemMonitorTests-Info.plist"; sourceTree = "<group>"; };
 		B4A4978519812EB40091D280 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B4A4978719812EB40091D280 /* ListInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListInfoTests.m; sourceTree = "<group>"; };
+		B4A4978719812EB40091D280 /* SystemMonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SystemMonitorTests.m; path = SystemMonitorTests/SystemMonitorTests.m; sourceTree = "<group>"; };
 		B4A4979419812EE10091D280 /* icmp_var.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icmp_var.h; sourceTree = "<group>"; };
 		B4A4979619812EE10091D280 /* igmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igmp.h; sourceTree = "<group>"; };
 		B4A4979719812EE10091D280 /* igmp_var.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igmp_var.h; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		B4A497AF19812F7A0091D280 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
 		B4A497B019812F7A0091D280 /* socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket.h; sourceTree = "<group>"; };
 		B4A497B119812F7A0091D280 /* socketvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socketvar.h; sourceTree = "<group>"; };
-		B4A498111981867A0091D280 /* ProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProcessInfo.h; path = ListInfo/ProcessInfo.h; sourceTree = SOURCE_ROOT; };
+		B4A498111981867A0091D280 /* ProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProcessInfo.h; path = SystemMonitor/ProcessInfo.h; sourceTree = SOURCE_ROOT; };
 		B4A498121981867A0091D280 /* ProcessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessInfo.m; sourceTree = "<group>"; };
 		B4F63CB7198284CD006EC367 /* Blacklister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blacklister.h; sourceTree = "<group>"; };
 		B4F63CB8198284CD006EC367 /* Blacklister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blacklister.m; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 				B4A4977A19812EB40091D280 /* XCTest.framework in Frameworks */,
 				B4A4977D19812EB40091D280 /* UIKit.framework in Frameworks */,
 				B4A4977B19812EB40091D280 /* Foundation.framework in Frameworks */,
-				B4A4978019812EB40091D280 /* libListInfo.a in Frameworks */,
+				B4A4978019812EB40091D280 /* libSystemMonitor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +115,8 @@
 		B4A4975F19812EB30091D280 = {
 			isa = PBXGroup;
 			children = (
-				B4A4976D19812EB40091D280 /* ListInfo */,
-				B4A4978119812EB40091D280 /* ListInfoTests */,
+				B4A4976D19812EB40091D280 /* SystemMonitor */,
+				B4A4978119812EB40091D280 /* SystemMonitorTests */,
 				B4A4976A19812EB40091D280 /* Frameworks */,
 				B4A4976919812EB40091D280 /* Products */,
 			);
@@ -125,8 +125,8 @@
 		B4A4976919812EB40091D280 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B4A4976819812EB40091D280 /* libListInfo.a */,
-				B4A4977819812EB40091D280 /* ListInfoTests.xctest */,
+				B4A4976819812EB40091D280 /* libSystemMonitor.a */,
+				B4A4977819812EB40091D280 /* SystemMonitorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B4A4976D19812EB40091D280 /* ListInfo */ = {
+		B4A4976D19812EB40091D280 /* SystemMonitor */ = {
 			isa = PBXGroup;
 			children = (
 				B4F63CB7198284CD006EC367 /* Blacklister.h */,
@@ -156,30 +156,31 @@
 				B4A4979119812EE10091D280 /* netinet */,
 				B4A4976E19812EB40091D280 /* Supporting Files */,
 			);
-			path = ListInfo;
+			path = SystemMonitor;
 			sourceTree = "<group>";
 		};
 		B4A4976E19812EB40091D280 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B4A4976F19812EB40091D280 /* ListInfo-Prefix.pch */,
+				B4A4976F19812EB40091D280 /* SystemMonitor-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B4A4978119812EB40091D280 /* ListInfoTests */ = {
+		B4A4978119812EB40091D280 /* SystemMonitorTests */ = {
 			isa = PBXGroup;
 			children = (
-				B4A4978719812EB40091D280 /* ListInfoTests.m */,
+				B4A4978719812EB40091D280 /* SystemMonitorTests.m */,
 				B4A4978219812EB40091D280 /* Supporting Files */,
 			);
+			name = SystemMonitorTests;
 			path = ListInfoTests;
 			sourceTree = "<group>";
 		};
 		B4A4978219812EB40091D280 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B4A4978319812EB40091D280 /* ListInfoTests-Info.plist */,
+				B4A4978319812EB40091D280 /* SystemMonitorTests-Info.plist */,
 				B4A4978419812EB40091D280 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -224,9 +225,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B4A4976719812EB40091D280 /* ListInfo */ = {
+		B4A4976719812EB40091D280 /* SystemMonitor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4A4978B19812EB40091D280 /* Build configuration list for PBXNativeTarget "ListInfo" */;
+			buildConfigurationList = B4A4978B19812EB40091D280 /* Build configuration list for PBXNativeTarget "SystemMonitor" */;
 			buildPhases = (
 				B4A4976419812EB40091D280 /* Sources */,
 				B4A4976519812EB40091D280 /* Frameworks */,
@@ -236,14 +237,14 @@
 			);
 			dependencies = (
 			);
-			name = ListInfo;
+			name = SystemMonitor;
 			productName = ListInfo;
-			productReference = B4A4976819812EB40091D280 /* libListInfo.a */;
+			productReference = B4A4976819812EB40091D280 /* libSystemMonitor.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		B4A4977719812EB40091D280 /* ListInfoTests */ = {
+		B4A4977719812EB40091D280 /* SystemMonitorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4A4978E19812EB40091D280 /* Build configuration list for PBXNativeTarget "ListInfoTests" */;
+			buildConfigurationList = B4A4978E19812EB40091D280 /* Build configuration list for PBXNativeTarget "SystemMonitorTests" */;
 			buildPhases = (
 				B4A4977419812EB40091D280 /* Sources */,
 				B4A4977519812EB40091D280 /* Frameworks */,
@@ -254,9 +255,9 @@
 			dependencies = (
 				B4A4977F19812EB40091D280 /* PBXTargetDependency */,
 			);
-			name = ListInfoTests;
+			name = SystemMonitorTests;
 			productName = ListInfoTests;
-			productReference = B4A4977819812EB40091D280 /* ListInfoTests.xctest */;
+			productReference = B4A4977819812EB40091D280 /* SystemMonitorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -267,7 +268,7 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = B4A4976319812EB30091D280 /* Build configuration list for PBXProject "ListInfo" */;
+			buildConfigurationList = B4A4976319812EB30091D280 /* Build configuration list for PBXProject "SystemMonitor" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -279,8 +280,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4A4976719812EB40091D280 /* ListInfo */,
-				B4A4977719812EB40091D280 /* ListInfoTests */,
+				B4A4976719812EB40091D280 /* SystemMonitor */,
+				B4A4977719812EB40091D280 /* SystemMonitorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -311,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4A4978819812EB40091D280 /* ListInfoTests.m in Sources */,
+				B4A4978819812EB40091D280 /* SystemMonitorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +321,7 @@
 /* Begin PBXTargetDependency section */
 		B4A4977F19812EB40091D280 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B4A4976719812EB40091D280 /* ListInfo */;
+			target = B4A4976719812EB40091D280 /* SystemMonitor */;
 			targetProxy = B4A4977E19812EB40091D280 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -410,9 +411,9 @@
 			buildSettings = {
 				DSTROOT = /tmp/ListInfo.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ListInfo/ListInfo-Prefix.pch";
+				GCC_PREFIX_HEADER = "ListInfo/SystemMonitor-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SystemMonitor;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -422,9 +423,9 @@
 			buildSettings = {
 				DSTROOT = /tmp/ListInfo.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ListInfo/ListInfo-Prefix.pch";
+				GCC_PREFIX_HEADER = "ListInfo/SystemMonitor-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SystemMonitor;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -443,8 +444,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "ListInfoTests/ListInfoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ListInfoTests/SystemMonitorTests-Info.plist";
+				PRODUCT_NAME = SystemMonitorTests;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -459,8 +460,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ListInfo/ListInfo-Prefix.pch";
-				INFOPLIST_FILE = "ListInfoTests/ListInfoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ListInfoTests/SystemMonitorTests-Info.plist";
+				PRODUCT_NAME = SystemMonitorTests;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -468,7 +469,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B4A4976319812EB30091D280 /* Build configuration list for PBXProject "ListInfo" */ = {
+		B4A4976319812EB30091D280 /* Build configuration list for PBXProject "SystemMonitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4A4978919812EB40091D280 /* Debug */,
@@ -477,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4A4978B19812EB40091D280 /* Build configuration list for PBXNativeTarget "ListInfo" */ = {
+		B4A4978B19812EB40091D280 /* Build configuration list for PBXNativeTarget "SystemMonitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4A4978C19812EB40091D280 /* Debug */,
@@ -486,7 +487,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4A4978E19812EB40091D280 /* Build configuration list for PBXNativeTarget "ListInfoTests" */ = {
+		B4A4978E19812EB40091D280 /* Build configuration list for PBXNativeTarget "SystemMonitorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4A4978F19812EB40091D280 /* Debug */,
