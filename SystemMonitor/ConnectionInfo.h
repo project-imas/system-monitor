@@ -1,6 +1,6 @@
 //
-//  ListInfo.h
-//  ListInfo
+//  SystemMonitor.h
+//  SystemMonitor
 //
 //  Created by Ren, Alice on 7/24/14.
 //

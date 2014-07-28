@@ -1,6 +1,6 @@
 //
-//  ListInfoTests.m
-//  ListInfoTests
+//  SystemMonitorTests.m
+//  SystemMonitorTests
 //
 //  Created by Ren, Alice on 7/24/14.
 //
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface ListInfoTests : XCTestCase
+@interface SystemMonitorTests : XCTestCase
 
 @end
 
-@implementation ListInfoTests
+@implementation SystemMonitorTests
 
 - (void)setUp
 {

@@ -1,6 +1,6 @@
 //
 //  ProcessInfo.h
-//  ListInfo
+//  SystemMonitor
 //
 //  Created by Ren, Alice on 7/24/14.
 //

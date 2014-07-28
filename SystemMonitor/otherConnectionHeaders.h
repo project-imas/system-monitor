@@ -77,6 +77,7 @@
 #include "tcp_seq.h"
 #include "tcp_fsm.h"
 #include "tcp_var.h"
+#include "tcp_timer.h"
 #include "udp.h"
 #include "udp_var.h"
 #include "socket.h"

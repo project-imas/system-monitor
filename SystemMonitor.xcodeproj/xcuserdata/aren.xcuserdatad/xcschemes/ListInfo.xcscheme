@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B4A4976719812EB40091D280"
-               BuildableName = "libListInfo.a"
-               BlueprintName = "ListInfo"
-               ReferencedContainer = "container:ListInfo.xcodeproj">
+               BuildableName = "libSystemMonitor.a"
+               BlueprintName = "SystemMonitor"
+               ReferencedContainer = "container:SystemMonitor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B4A4977719812EB40091D280"
-               BuildableName = "ListInfoTests.xctest"
-               BlueprintName = "ListInfoTests"
-               ReferencedContainer = "container:ListInfo.xcodeproj">
+               BuildableName = "SystemMonitorTests.xctest"
+               BlueprintName = "SystemMonitorTests"
+               ReferencedContainer = "container:SystemMonitor.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
