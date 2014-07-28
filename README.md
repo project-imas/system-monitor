@@ -3,8 +3,6 @@ system-monitor
 
 View active connections and current processes on device. *Note:* this library makes use of system calls; Apple will not accept any app built using it.
 
-# Usage
-
 ## Connection Info
 
 `NSMutableArray* getActiveConnections(uint32_t proto, char *name, int af)`
