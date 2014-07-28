@@ -367,29 +367,14 @@ char *inetname(struct in_addr *inp)
 	return (line);
 }
 
-- (void) printTCPConnections:(BOOL) simple {
+- (void) printTCPConnections {
     NSArray *connections = [NSArray arrayWithArray:getActiveConnections(IPPROTO_TCP,"tcp",AF_INET)];
-    if (simple)
-        NSLog(@"%@",connections);
-    else
-        [self prettyPrintFromArrayOfDictionaries:connections];
+    NSLog(@"%@",connections);
 }
 
-- (void) printUDPConnections:(BOOL) simple {
+- (void) printUDPConnections {
     NSArray *connections = [NSArray arrayWithArray:getActiveConnections(IPPROTO_UDP,"udp",AF_INET)];
-    if (simple)
-        NSLog(@"%@",connections);
-    else
-        [self prettyPrintFromArrayOfDictionaries:connections];
-}
-
-- (void) prettyPrintFromArrayOfDictionaries:(NSArray *)connections {
-     for (NSDictionary *dict in connections) {
-         for (id key in dict) {
-             NSLog(@"%@: %@",key,[dict objectForKey:key]);
-         }
-         putchar('\n');
-     }
+    NSLog(@"%@",connections);
 }
 
 

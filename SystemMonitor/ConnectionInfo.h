@@ -12,8 +12,7 @@
 @interface ConnectionInfo : NSObject
 
 NSMutableArray* getActiveConnections(uint32_t proto, char *name, int af);
-- (void) printTCPConnections:(BOOL) simple;
-- (void) printUDPConnections:(BOOL) simple;
-- (void) prettyPrintFromArrayOfDictionaries:(NSArray *)connections;
+- (void) printTCPConnections;
+- (void) printUDPConnections;
 
 @end
