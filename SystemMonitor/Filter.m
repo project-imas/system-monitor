@@ -15,6 +15,63 @@
 
 @implementation Filter
 
+- (id)initWithOptions:(NSString *)name
+                   info:(NSString *)info
+                   type:(NSString *)type
+                  field:(NSString *)field
+                   list:(NSArray *)list {
+    self = [super init];
+    if (self) {
+        _filterName = name;
+        _infoType = info;
+        _filterType = type;
+        _field = field;
+        _termList = list;
+    }
+    return self;
+}
+
+- (void) filterWhitelist:(Filter *)filter {
+    NSArray *array = [[NSArray alloc] init];
+    
+    if ([filter.infoType isEqualToString:@"ConnectionInfo"])
+        array = [NSArray arrayWithArray:getActiveConnections(IPPROTO_TCP,"tcp",AF_INET)];
+    else if ([filter.infoType isEqualToString:@"ProcessInfo"])
+        array = [NSArray arrayWithArray:getProcessInfo()];
+    else {
+        NSLog(@"Info type %@ not supported",filter.infoType);
+        return;
+    }
+    
+    if (![[array firstObject] objectForKey:filter.field]) {
+        NSLog(@"Field %@ not found",filter.field);
+        return;
+    }
+    
+    [self whitelist:filter.termList inArray:array forInfoType:filter.infoType fieldToSearch:filter.field];
+}
+
+- (void) filterBlacklist:(Filter *)filter {
+    NSArray *array = [[NSArray alloc] init];
+    
+    if ([filter.infoType isEqualToString:@"ConnectionInfo"])
+        array = [NSArray arrayWithArray:getActiveConnections(IPPROTO_TCP,"tcp",AF_INET)];
+    else if ([filter.infoType isEqualToString:@"ProcessInfo"])
+        array = [NSArray arrayWithArray:getProcessInfo()];
+    else {
+        NSLog(@"Info type %@ not supported",filter.infoType);
+        return;
+    }
+    
+    if (![[array firstObject] objectForKey:filter.field]) {
+        NSLog(@"Field %@ not found",filter.field);
+        return;
+    }
+    
+    [self blacklist:filter.termList inArray:array forInfoType:filter.infoType fieldToSearch:filter.field];
+}
+
+
 - (void) filter:(NSString *)infoType
           field:(NSString *)field
       blacklist:(NSArray *)blacklist

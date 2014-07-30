@@ -10,6 +10,20 @@
 
 @interface Filter : NSObject
 
+@property NSString *filterName;
+@property NSString *infoType;
+@property NSString *filterType;
+@property NSString *field;
+@property NSArray *termList;
+
+- (id)initWithOptions:(NSString *)name
+                   info:(NSString *)info
+                   type:(NSString *)type
+                  field:(NSString *)field
+                   list:(NSArray *)list;
+- (void) filterWhitelist:(Filter *)filter;
+- (void) filterBlacklist:(Filter *)filter;
+
 - (void) filter:(NSString *)infoType
           field:(NSString *)field
       blacklist:(NSArray *)blacklist
