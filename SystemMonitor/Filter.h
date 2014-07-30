@@ -17,12 +17,11 @@
 @property NSArray *termList;
 
 - (id)initWithOptions:(NSString *)name
-                   info:(NSString *)info
-                   type:(NSString *)type
-                  field:(NSString *)field
-                   list:(NSArray *)list;
-- (void) filterWhitelist:(Filter *)filter;
-- (void) filterBlacklist:(Filter *)filter;
+                 info:(NSString *)info
+                 type:(NSString *)type
+                field:(NSString *)field
+                 list:(NSArray *)list;
+- (void) filterWithFilter:(Filter *)filter;
 
 - (void) filter:(NSString *)infoType
           field:(NSString *)field
