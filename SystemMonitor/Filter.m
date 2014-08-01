@@ -31,28 +31,28 @@
     return self;
 }
 
-- (void) filterWithFilter:(Filter *)filter {
+- (void) filterWithFilter {
     NSArray *array = [[NSArray alloc] init];
     
-    if ([filter.infoType isEqualToString:@"ConnectionInfo"])
+    if ([self.infoType isEqualToString:@"ConnectionInfo"])
         array = [NSArray arrayWithArray:getActiveConnections(IPPROTO_TCP,"tcp",AF_INET)];
-    else if ([filter.infoType isEqualToString:@"ProcessInfo"])
+    else if ([self.infoType isEqualToString:@"ProcessInfo"])
         array = [NSArray arrayWithArray:getProcessInfo()];
     else {
-        NSLog(@"Info type %@ not supported",filter.infoType);
+        NSLog(@"Info type %@ not supported",self.infoType);
         return;
     }
     
-    if (![[array firstObject] objectForKey:filter.field]) {
-        NSLog(@"Field %@ not found",filter.field);
+    if (![[array firstObject] objectForKey:self.field]) {
+        NSLog(@"Field %@ not found",self.field);
         return;
     }
     
-    NSString *filterType = filter.filterType;
+    NSString *filterType = self.filterType;
     if ([filterType isEqualToString:@"whitelist"]) {
-        [self whitelist:filter.termList inArray:array forInfoType:filter.infoType fieldToSearch:filter.field];
+        [self whitelist:self.termList inArray:array forInfoType:self.infoType fieldToSearch:self.field];
     } else {
-        [self blacklist:filter.termList inArray:array forInfoType:filter.infoType fieldToSearch:filter.field];
+        [self blacklist:self.termList inArray:array forInfoType:self.infoType fieldToSearch:self.field];
     }
 }
 

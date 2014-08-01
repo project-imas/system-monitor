@@ -21,7 +21,8 @@
                  type:(NSString *)type
                 field:(NSString *)field
                  list:(NSArray *)list;
-- (void) filterWithFilter:(Filter *)filter;
+
+- (void) filterWithFilter;
 
 - (void) filter:(NSString *)infoType
           field:(NSString *)field
