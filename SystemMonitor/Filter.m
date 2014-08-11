@@ -26,12 +26,32 @@
         _infoType = info;
         _filterType = type;
         _field = field;
-        _termList = list;
+        _termList = [[NSArray alloc] initWithArray:list];
     }
     return self;
 }
 
-- (void) filterWithFilter {
+- (NSMutableDictionary *)getFilterdict {
+    self.filterDict = [[NSMutableDictionary alloc]
+                       initWithObjects:[NSArray arrayWithObjects:self.filterName, self.infoType, self.filterType, self.field, self.termList,nil]
+                       forKeys:[NSArray arrayWithObjects:@"Filter name", @"Info type", @"Filter type", @"Field", @"Terms", nil]];
+    return self.filterDict;
+}
+
+- (id)initWithDict:(NSDictionary *)dict {
+    self = [super init];
+    if (self) {
+        //        self.filterDict = [NSMutableDictionary dictionaryWithDictionary:dict];
+        _filterName = [dict objectForKey:@"Filter name"];
+        _infoType = [dict objectForKey:@"Info type"];
+        _filterType = [dict objectForKey:@"Filter type"];
+        _field = [dict objectForKey:@"Field"];
+        _termList = [dict objectForKey:@"Terms"];
+    }
+    return self;
+}
+
+- (void) filter {
     NSArray *array = [[NSArray alloc] init];
     
     if ([self.infoType isEqualToString:@"ConnectionInfo"])
@@ -44,45 +64,15 @@
     }
     
     if (![[array firstObject] objectForKey:self.field]) {
-        NSLog(@"Field %@ not found",self.field);
+        NSLog(@"Field %@ not found",[self.filterDict objectForKey:@"Field"]);
         return;
     }
     
-    NSString *filterType = self.filterType;
-    if ([filterType isEqualToString:@"whitelist"]) {
+    if ([self.filterType isEqualToString:@"whitelist"]) {
         [self whitelist:self.termList inArray:array forInfoType:self.infoType fieldToSearch:self.field];
     } else {
         [self blacklist:self.termList inArray:array forInfoType:self.infoType fieldToSearch:self.field];
     }
-}
-
-
-- (void) filter:(NSString *)infoType
-          field:(NSString *)field
-      blacklist:(NSArray *)blacklist
-      whitelist:(NSArray *)whitelist {
-    NSArray *array = [[NSArray alloc] init];
-    
-    if ([infoType isEqualToString:@"ConnectionInfo"])
-        array = [NSArray arrayWithArray:getActiveConnections(IPPROTO_TCP,"tcp",AF_INET)];
-    else if ([infoType isEqualToString:@"ProcessInfo"])
-        array = [NSArray arrayWithArray:getProcessInfo()];
-    else {
-        NSLog(@"Info type %@ not supported",infoType);
-        return;
-    }
-    
-    if (![[array firstObject] objectForKey:field]) {
-        NSLog(@"Field %@ not found",field);
-        return;
-    }
-    
-    /* whitelist */
-    [self whitelist:whitelist inArray:array forInfoType:infoType fieldToSearch:field];
-    
-    
-    /* blacklist */
-    [self blacklist:blacklist inArray:array forInfoType:infoType fieldToSearch:field];
 }
 
 - (void) whitelist:(NSArray *)list inArray:(NSArray *)array forInfoType:(NSString *)infoType fieldToSearch:(NSString *)field {
@@ -105,7 +95,6 @@
 }
 
 - (void) blacklist:(NSArray *)list inArray:(NSArray *)array forInfoType:(NSString *)infoType fieldToSearch:(NSString *)field {
-    // search for blacklist terms, one at a time (?) there's probably a way to do this more efficiently (sort array and list?)
     int count = 0;
     for (NSDictionary *dict in array) {
         for (int i = 0; i < [list count]; i++) {
