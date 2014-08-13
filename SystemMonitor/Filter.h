@@ -17,7 +17,6 @@
 @property NSString *filterType;
 @property NSString *field;
 @property NSMutableArray *termList;
-@property NSMutableDictionary *filterDict;
 
 - (id)initWithOptions:(NSString *)name
                  info:(NSString *)info

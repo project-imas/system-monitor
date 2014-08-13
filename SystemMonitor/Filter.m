@@ -32,10 +32,9 @@
 }
 
 - (NSMutableDictionary *)getFilterdict {
-    self.filterDict = [[NSMutableDictionary alloc]
-                       initWithObjects:[NSArray arrayWithObjects:self.filterName, self.infoType, self.filterType, self.field, self.termList,nil]
-                       forKeys:[NSArray arrayWithObjects:FILTER_NAME, FILTER_INFO_TYPE, FILTER_TYPE, FILTER_FIELD, FILTER_TERMS, nil]];
-    return self.filterDict;
+    return [[NSMutableDictionary alloc]
+            initWithObjects:@[self.filterName, self.infoType, self.filterType, self.field, self.termList]
+            forKeys:@[FILTER_NAME, FILTER_INFO_TYPE, FILTER_TYPE, FILTER_FIELD, FILTER_TERMS]];
 }
 
 - (id)initWithDict:(NSDictionary *)dict {
@@ -63,7 +62,7 @@
     }
     
     if (![[array firstObject] objectForKey:self.field]) {
-        NSLog(@"Field %@ not found",[self.filterDict objectForKey:FILTER_FIELD]);
+        NSLog(@"Field %@ not found",self.field);
         return;
     }
     
