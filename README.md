@@ -1,7 +1,7 @@
 system-monitor
 ==============
 
-View active connections and current processes on device. *Note:* this library makes use of system calls; Apple will not accept any app built using it.
+View and blacklist/whitelist active connections and current processes on device. *Note:* this library makes use of system calls; Apple will not accept any app built using it.
 
 ## Fetching Connection Info
 
