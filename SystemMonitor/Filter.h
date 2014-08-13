@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "constants.h"
+
 @interface Filter : NSObject
 
 @property NSString *filterName;

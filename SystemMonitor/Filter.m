@@ -34,18 +34,18 @@
 - (NSMutableDictionary *)getFilterdict {
     self.filterDict = [[NSMutableDictionary alloc]
                        initWithObjects:[NSArray arrayWithObjects:self.filterName, self.infoType, self.filterType, self.field, self.termList,nil]
-                       forKeys:[NSArray arrayWithObjects:@"Filter name", @"Info type", @"Filter type", @"Field", @"Terms", nil]];
+                       forKeys:[NSArray arrayWithObjects:FILTER_NAME, FILTER_INFO_TYPE, FILTER_TYPE, FILTER_FIELD, FILTER_TERMS, nil]];
     return self.filterDict;
 }
 
 - (id)initWithDict:(NSDictionary *)dict {
     self = [super init];
     if (self) {
-        _filterName = [dict objectForKey:@"Filter name"];
-        _infoType = [dict objectForKey:@"Info type"];
-        _filterType = [dict objectForKey:@"Filter type"];
-        _field = [dict objectForKey:@"Field"];
-        _termList = [dict objectForKey:@"Terms"];
+        _filterName = [dict objectForKey:FILTER_NAME];
+        _infoType = [dict objectForKey:FILTER_INFO_TYPE];
+        _filterType = [dict objectForKey:FILTER_TYPE];
+        _field = [dict objectForKey:FILTER_FIELD];
+        _termList = [dict objectForKey:FILTER_TERMS];
     }
     return self;
 }
@@ -53,9 +53,9 @@
 - (void) filter {
     NSArray *array = [[NSArray alloc] init];
     
-    if ([self.infoType isEqualToString:@"ConnectionInfo"])
+    if ([self.infoType isEqualToString:CONNECTION_INFO])
         array = [NSArray arrayWithArray:getActiveConnections(IPPROTO_TCP,"tcp",AF_INET)];
-    else if ([self.infoType isEqualToString:@"ProcessInfo"])
+    else if ([self.infoType isEqualToString:PROCESS_INFO])
         array = [NSArray arrayWithArray:getProcessInfo()];
     else {
         NSLog(@"Info type %@ not supported",self.infoType);
@@ -63,11 +63,11 @@
     }
     
     if (![[array firstObject] objectForKey:self.field]) {
-        NSLog(@"Field %@ not found",[self.filterDict objectForKey:@"Field"]);
+        NSLog(@"Field %@ not found",[self.filterDict objectForKey:FILTER_FIELD]);
         return;
     }
     
-    if ([self.filterType isEqualToString:@"whitelist"]) {
+    if ([self.filterType isEqualToString:WHITELIST]) {
         [self whitelist:self.termList inArray:array forInfoType:self.infoType fieldToSearch:self.field];
     } else {
         [self blacklist:self.termList inArray:array forInfoType:self.infoType fieldToSearch:self.field];
@@ -107,7 +107,7 @@
             }
         }
     }
-    //    NSLog(@"FOUND %d BLACKLISTED INSTANCES",count);
+    NSLog(@"FOUND %d BLACKLISTED INSTANCES",count);
 }
 
 @end

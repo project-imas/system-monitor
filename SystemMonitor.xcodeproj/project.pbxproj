@@ -17,6 +17,7 @@
 		B4A4978619812EB40091D280 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4A4978419812EB40091D280 /* InfoPlist.strings */; };
 		B4A4978819812EB40091D280 /* SystemMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A4978719812EB40091D280 /* SystemMonitorTests.m */; };
 		B4A498131981867A0091D280 /* ProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A498121981867A0091D280 /* ProcessInfo.m */; };
+		B4BB9D43199BB40500270790 /* constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BB9D42199BB40500270790 /* constants.m */; };
 		B4F63CB519818AA7006EC367 /* ProcessInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B4A498111981867A0091D280 /* ProcessInfo.h */; };
 		B4F63CD419868A98006EC367 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F63CD319868A98006EC367 /* Filter.m */; };
 		B4F63CD519868AA6006EC367 /* Filter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B4F63CD219868A98006EC367 /* Filter.h */; };
@@ -85,6 +86,8 @@
 		B4A497B119812F7A0091D280 /* socketvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socketvar.h; sourceTree = "<group>"; };
 		B4A498111981867A0091D280 /* ProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProcessInfo.h; path = SystemMonitor/ProcessInfo.h; sourceTree = SOURCE_ROOT; };
 		B4A498121981867A0091D280 /* ProcessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessInfo.m; sourceTree = "<group>"; };
+		B4BB9D41199BB40500270790 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		B4BB9D42199BB40500270790 /* constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = constants.m; sourceTree = "<group>"; };
 		B4F63CD219868A98006EC367 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
 		B4F63CD319868A98006EC367 /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +155,8 @@
 				B4A4977219812EB40091D280 /* ConnectionInfo.m */,
 				B4A497AB19812F220091D280 /* otherConnectionHeaders.h */,
 				B4A497AA19812EFB0091D280 /* netstat.h */,
+				B4BB9D41199BB40500270790 /* constants.h */,
+				B4BB9D42199BB40500270790 /* constants.m */,
 				B4A497B219812F840091D280 /* SDK headers */,
 				B4A4979119812EE10091D280 /* netinet */,
 				B4A4976E19812EB40091D280 /* Supporting Files */,
@@ -306,6 +311,7 @@
 				B4A4977319812EB40091D280 /* ConnectionInfo.m in Sources */,
 				B4A498131981867A0091D280 /* ProcessInfo.m in Sources */,
 				B4F63CD419868A98006EC367 /* Filter.m in Sources */,
+				B4BB9D43199BB40500270790 /* constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
