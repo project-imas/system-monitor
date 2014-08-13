@@ -26,7 +26,7 @@
         _infoType = info;
         _filterType = type;
         _field = field;
-        _termList = [[NSArray alloc] initWithArray:list];
+        _termList = [[NSMutableArray alloc] initWithArray:list];
     }
     return self;
 }
@@ -41,7 +41,6 @@
 - (id)initWithDict:(NSDictionary *)dict {
     self = [super init];
     if (self) {
-        //        self.filterDict = [NSMutableDictionary dictionaryWithDictionary:dict];
         _filterName = [dict objectForKey:@"Filter name"];
         _infoType = [dict objectForKey:@"Info type"];
         _filterType = [dict objectForKey:@"Filter type"];
@@ -108,7 +107,7 @@
             }
         }
     }
-    NSLog(@"FOUND %d BLACKLISTED INSTANCES",count);
+    //    NSLog(@"FOUND %d BLACKLISTED INSTANCES",count);
 }
 
 @end

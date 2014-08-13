@@ -52,7 +52,7 @@ NSMutableArray* getProcessInfo() {
                     NSString *uname = [[NSString alloc] initWithFormat:@"%s",user->pw_name];
                     
                     NSDictionary * dict = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:pid, pName, uname, nil]
-                                                                        forKeys:[NSArray arrayWithObjects:@"PID", @"PName", @"User", nil]];
+                                                                        forKeys:[NSArray arrayWithObjects:@"PID", @"Process name", @"User", nil]];
                     [info addObject:dict];
                 }
                 
