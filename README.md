@@ -53,7 +53,7 @@ The `filter` method in the `Filter.m` class searches the specified list (connect
                  list:(NSArray *)list
 ```
 
-where `name` is the name you give the filter, `info` is the type of information you wish to search ("ProcessInfo" or "ConnectionInfo"), `type` is the type of filter ("blacklist" or "whitelist"), `field` is the field to search (see "Fetching Process Info" and "Fetching Connection Info" sections for details), and `list` is an NSArray of the terms you want to search for.
+where `name` is the name you give the filter, `info` is the type of information you wish to search, `type` is the type of filter, `field` is the field to search, and `list` is an NSArray of the terms you want to search for. (See [Constants](#constants) section for a list of constants to use.)
 
 #### Using a filter
 
@@ -72,5 +72,48 @@ Filter *socialMediaFilter = [[Filter alloc] initWithOptions:@"Social Media Filte
 [socialMediaFilter filter];
 ```
 
-## TODO
-* Update to use constants instead of strings
+## <a name="constants"></a>Constants
+
+#### "Info" constants
+
+```
+extern NSString * const PROCESS_INFO;
+extern NSString * const CONNECTION_INFO;
+```
+
+#### "Type" constants
+
+```
+extern NSString * const BLACKLIST;
+extern NSString * const WHITELIST;
+```
+
+#### "Field" constants
+
+For CONNECTION_INFO:
+
+```
+extern NSString * const FOREIGN_ADDRESS;
+extern NSString * const FOREIGN_PORT;
+extern NSString * const LOCAL_ADDRESS;
+extern NSString * const LOCAL_PORT;
+```
+
+For PROCESS_INFO:
+
+```
+extern NSString * const PROCESS_ID;
+extern NSString * const PROCESS_NAME;
+extern NSString * const PROCESS_USER;
+```
+
+#### Other constants
+
+For accessing filter attributes (e.g. in a dictionary):
+
+```
+extern NSString * const FILTER_NAME;
+extern NSString * const FILTER_TYPE;
+extern NSString * const FILTER_INFO_TYPE;
+extern NSString * const FILTER_FIELD;
+```
