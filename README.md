@@ -64,9 +64,9 @@ Once you have created a filter using `-initWithOptions`, you can run it by calli
 #import <Filter.h>
 ...
 Filter *socialMediaFilter = [[Filter alloc] initWithOptions:@"Social Media Filter"
-                                                       info:@"ConnectionInfo"
-                                                       type:@"blacklist"
-                                                      field:@"foreign address"
+                                                       info:CONNECTION_INFO
+                                                       type:BLACKLIST
+                                                      field:FOREIGN_ADDRESS
                                                        list:@[@"facebook",@"twitter"]];
 
 [socialMediaFilter filter];
